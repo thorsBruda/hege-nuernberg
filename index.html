@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --bg:#F4F3EF;
+    --bg:#FFFFFF;
     --card:#FFFFFF;
     --ink:#2B2D30;
     --muted:#6C7074;
-    --line:#E6E4DD;
+    --line:transparent;
     --accent:#2F5D62;
     --accent-ink:#234A4F;
     --maxw:1160px;
@@ -79,8 +79,8 @@
   .planimg img{width:100%;height:auto;border-radius:8px}
 
   /* Bild-Reihen (Collage) */
-  .rows{display:flex;flex-direction:column;gap:18px}
-  .row{display:grid;gap:18px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}
+  .rows{display:flex;flex-direction:column;gap:34px}
+  .row{display:grid;gap:18px;align-items:center;background:transparent;border:none;border-radius:0;padding:0}
   .row .sq{border-radius:12px;overflow:hidden;background:var(--bg)}
   .row .sq img{width:100%;height:auto;aspect-ratio:1;object-fit:cover}
   .row .lab{display:flex;flex-direction:column;align-items:center;gap:14px;text-align:center}
@@ -104,7 +104,7 @@
   .contact .inner{position:relative;z-index:1}
   .contact h2{color:#fff;text-align:center;font-size:clamp(26px,4.5vw,38px);margin-bottom:34px}
   .cgrid{display:grid;gap:20px;max-width:980px;margin:0 auto}
-  .ccard{background:#fff;border:1px solid rgba(255,255,255,.5);border-radius:16px;padding:28px 22px;text-align:center;box-shadow:0 12px 26px rgba(0,0,0,.14)}
+  .ccard{background:#fff;border:none;border-radius:16px;padding:28px 22px;text-align:center;box-shadow:0 12px 26px rgba(0,0,0,.14)}
   .ccard .ic{width:48px;height:48px;border-radius:12px;background:rgba(110,138,142,.16);display:grid;place-items:center;margin:0 auto 14px}
   .ccard .ic svg{width:22px;height:22px;stroke:#52706f;fill:none}
   .ccard h3{font-size:18px;margin-bottom:10px;color:var(--ink)}
@@ -132,7 +132,7 @@
   @media(min-width:860px){
     section{padding:48px 0}
     .leadwrap{grid-template-columns:1.05fr .95fr}
-    .row{grid-template-columns:1fr 1fr;padding:22px}
+    .row{grid-template-columns:1fr 1fr;padding:0}
     .row.flip .sq{order:2}
     .grid-gal{grid-template-columns:repeat(4,1fr)}
     .contact{padding:52px 44px}
