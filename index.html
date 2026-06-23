@@ -47,8 +47,8 @@
 
   /* Interaktiver Hotspot (Badstraße) */
   .hotspot{position:absolute;left:50%;top:55%;width:30px;height:30px;display:grid;place-items:center;z-index:6;cursor:pointer;-webkit-tap-highlight-color:transparent;--mx:0px;--my:0px;transform:translate(calc(-50% + var(--mx)),calc(-50% + var(--my)));transition:transform .18s ease-out}
-  .hotspot .ring{position:absolute;width:20px;height:20px;border-radius:50%;background:#EAD8CD;opacity:.6;animation:hotpulse 1.9s ease-out infinite}
-  .hotspot .dot{position:relative;width:20px;height:20px;border-radius:50%;background:#EAD8CD;border:2.5px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.45);z-index:2;transition:transform .18s ease}
+  .hotspot .ring{position:absolute;width:20px;height:20px;border-radius:50%;background:var(--hc,#EAD8CD);opacity:.6;animation:hotpulse 1.9s ease-out infinite;animation-delay:var(--d,0s)}
+  .hotspot .dot{position:relative;width:20px;height:20px;border-radius:50%;background:var(--hc,#EAD8CD);border:2.5px solid #fff;box-shadow:0 2px 10px rgba(0,0,0,.45);z-index:2;transition:transform .18s ease}
   .hotspot:hover .dot{transform:scale(1.18)}
   .hotspot:focus-visible{outline:none}
   .hotspot:focus-visible .dot{box-shadow:0 0 0 4px rgba(110,138,142,.55),0 2px 10px rgba(0,0,0,.4)}
@@ -64,7 +64,7 @@
   .banner img{width:100%;height:auto;border-radius:12px}
 
   /* Foto-Galerie 3er */
-  .grid3{display:grid;grid-template-columns:1fr;gap:18px;align-items:start}
+  .grid3{display:grid;grid-template-columns:1fr;gap:20px;align-items:start}
   .grid3 figure{border-radius:var(--r);overflow:hidden;border:1px solid var(--line);background:var(--card)}
   .grid3 img{display:block;width:100%;height:auto}
 
@@ -149,10 +149,14 @@
     <div class="wrap">
       <div class="imgcard" id="heroCard">
         <img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/82faac2d-a672-46dc-bbfc-6c990d7a8e70/l0,t0,w2000,h1141/image.png" alt="HeGe Nürnberg" loading="eager" onerror="this.closest('.imgcard').style.display='none'">
-        <a class="hotspot" id="badHotspot" href="#badstrasse" aria-label="Zum Abschnitt Badstraße" style="left:63%;top:81%">
-          <span class="ring" aria-hidden="true"></span>
-          <span class="dot" aria-hidden="true"></span>
-        </a>
+        <a class="hotspot" href="#layer1" aria-label="Zum Abschnitt Badstraße" style="left:64.5%;top:79.25%;--hc:#EAD8CD;--d:0s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer2" aria-label="Zum Abschnitt Poststraße" style="left:38.7%;top:79.25%;--hc:#2F7C98;--d:.25s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer3" aria-label="Zum Abschnitt Hafenstraße" style="left:28.5%;top:61.25%;--hc:#CFA0B4;--d:.5s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer4" aria-label="Zum Abschnitt Münchnerstraße" style="left:28.5%;top:35.5%;--hc:#E4BD9A;--d:.75s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer5" aria-label="Zum Abschnitt Museumstraße" style="left:38.75%;top:11.5%;--hc:#ECA5B3;--d:1s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer6" aria-label="Zum Abschnitt Lessingstraße" style="left:57.25%;top:11.5%;--hc:#F2DAB0;--d:1.25s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer7" aria-label="Zum Abschnitt Rathausplatz" style="left:67.5%;top:16.25%;--hc:#67AD93;--d:1.5s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
+        <a class="hotspot" href="#layer8" aria-label="Zum Abschnitt Schloßallee" style="left:67.5%;top:74.25%;--hc:#70859A;--d:1.75s"><span class="ring" aria-hidden="true"></span><span class="dot" aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
@@ -188,22 +192,21 @@
   </section>
 
   <!-- BILD-REIHEN -->
-  <section style="padding-top:8px">
+  <section id="beispiele" style="padding-top:8px;scroll-margin-top:24px">
     <div class="wrap">
       <div class="banner">
         <img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/7b419507-de5c-4aa5-bfdb-9857c0f29a24/l0,t0,w1919,h253/image.jpg" alt="" loading="lazy" onerror="this.closest('.banner').style.display='none'">
       </div>
       <div class="rows">
 
-        <div class="row" id="badstrasse" style="scroll-margin-top:24px">
+        <div class="row" id="layer1" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/1f2ba6b1-0e8f-4f66-98b3-15317a067a97/l0,t0,w591,h591/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="lab">
-            <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/ba5d9043-3926-4a48-8d09-8adab449140a/l0,t0,w591,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
-            <div class="icon"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/2e44320b-a631-4113-b9d2-634b37fbcfa6/l170,t0,w205,h211/image.png" alt="" loading="lazy" onerror="this.closest('.icon').style.display='none'"></div>
+          <div class="lab" style="align-self:start">
+            <div class="strip"><img src="badbad.png" alt="1-Zimmer-Wohnung Badstraße Nürnberg" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
           </div>
         </div>
 
-        <div class="row flip">
+        <div class="row flip" id="layer2" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/f91d307d-65fd-4e98-99f1-3711ec4c398c/l0,t0,w591,h591/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/bd20e009-5938-438d-9ad1-5439d3f25c98/l0,t0,w591,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
@@ -211,7 +214,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="layer3" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/77b85d93-62bd-412b-8bbe-010356b53ccf/l0,t0,w591,h591/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/4aeaad17-856a-49eb-87fe-49735d74884e/l0,t0,w443,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
@@ -219,7 +222,7 @@
           </div>
         </div>
 
-        <div class="row flip">
+        <div class="row flip" id="layer4" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/db8bfd60-994d-431c-b480-14b887c81d3b/l0,t0,w787,h787/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/becccbd9-008e-4730-b587-e7ae81f13313/l0,t0,w591,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
@@ -227,7 +230,7 @@
           </div>
         </div>
 
-        <div class="row">
+        <div class="row" id="layer5" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/f0ad4432-e0fd-45cc-b929-f293f2c997be/l0,t0,w591,h591/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/e887fffe-321d-4c3f-9c2b-072eb1332848/l0,t0,w591,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
@@ -235,7 +238,7 @@
           </div>
         </div>
 
-        <div class="row flip">
+        <div class="row flip" id="layer6" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/8ff0a9b1-be5b-4713-9cdf-7bf504b1ec05/l0,t0,w591,h591/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/409ec7b5-41b4-450c-90c0-cc33df8fb0dd/l0,t0,w443,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
@@ -243,19 +246,19 @@
           </div>
         </div>
 
-        <div class="row">
-          <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/8d90e110-0379-4e73-b935-d9ff187f1904/l0,t0,w787,h787/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
-          <div class="lab">
-            <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/260683a4-8ec5-43ba-8f0d-fdedc3d7c618/l0,t0,w443,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
-            <div class="icon"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/9e8008f0-54bc-4d16-9128-bc170a4cbac9/l0,t45,w68,h52/image.png" alt="" loading="lazy" onerror="this.closest('.icon').style.display='none'"></div>
-          </div>
-        </div>
-
-        <div class="row flip">
+        <div class="row" id="layer7" style="scroll-margin-top:24px">
           <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/d6e31d9d-7e79-4d9d-9bf1-0a50f7a31e5b/l142,t406,w1068,h1068/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
           <div class="lab">
             <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/7bb8f928-277c-452b-882b-e5f90c99316a/l0,t0,w443,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
             <div class="icon"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/72570d0d-d87a-4b34-be77-1c5c3c298c83/l8,t0,w52,h120/image.png" alt="" loading="lazy" onerror="this.closest('.icon').style.display='none'"></div>
+          </div>
+        </div>
+
+        <div class="row flip" id="layer8" style="scroll-margin-top:24px">
+          <div class="sq"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/8d90e110-0379-4e73-b935-d9ff187f1904/l0,t0,w787,h787/image.jpg" alt="" loading="lazy" onerror="this.style.display='none'"></div>
+          <div class="lab">
+            <div class="strip"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/260683a4-8ec5-43ba-8f0d-fdedc3d7c618/l0,t0,w443,h197/image.jpg" alt="" loading="lazy" onerror="this.closest('.strip').style.display='none'"></div>
+            <div class="icon"><img src="https://www.hege-nuernberg.de/wp-content/uploads/go-x/u/9e8008f0-54bc-4d16-9128-bc170a4cbac9/l0,t45,w68,h52/image.png" alt="" loading="lazy" onerror="this.closest('.icon').style.display='none'"></div>
           </div>
         </div>
 
@@ -344,28 +347,29 @@
 <script>
 (function(){
   var card=document.getElementById('heroCard');
-  var hot=document.getElementById('badHotspot');
-  if(!card||!hot) return;
-  var radius=150, pull=0.45;
+  if(!card) return;
+  var hotspots=card.querySelectorAll('.hotspot');
+  if(!hotspots.length) return;
+  var radius=140, pull=0.45;
+  function reset(){hotspots.forEach(function(h){h.style.setProperty('--mx','0px');h.style.setProperty('--my','0px');});}
   card.addEventListener('pointermove',function(e){
     var r=card.getBoundingClientRect();
-    var hx=r.left + r.width*(parseFloat(hot.style.left)/100);
-    var hy=r.top + r.height*(parseFloat(hot.style.top)/100);
-    var dx=e.clientX-hx, dy=e.clientY-hy;
-    var dist=Math.hypot(dx,dy);
-    if(dist<radius){
-      var f=(1-dist/radius)*pull;
-      hot.style.setProperty('--mx',(dx*f).toFixed(1)+'px');
-      hot.style.setProperty('--my',(dy*f).toFixed(1)+'px');
-    }else{
-      hot.style.setProperty('--mx','0px');
-      hot.style.setProperty('--my','0px');
-    }
+    hotspots.forEach(function(hot){
+      var hx=r.left + r.width*(parseFloat(hot.style.left)/100);
+      var hy=r.top + r.height*(parseFloat(hot.style.top)/100);
+      var dx=e.clientX-hx, dy=e.clientY-hy;
+      var dist=Math.hypot(dx,dy);
+      if(dist<radius){
+        var f=(1-dist/radius)*pull;
+        hot.style.setProperty('--mx',(dx*f).toFixed(1)+'px');
+        hot.style.setProperty('--my',(dy*f).toFixed(1)+'px');
+      }else{
+        hot.style.setProperty('--mx','0px');
+        hot.style.setProperty('--my','0px');
+      }
+    });
   });
-  card.addEventListener('pointerleave',function(){
-    hot.style.setProperty('--mx','0px');
-    hot.style.setProperty('--my','0px');
-  });
+  card.addEventListener('pointerleave',reset);
 })();
 </script>
 </body>
